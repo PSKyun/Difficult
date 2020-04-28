@@ -2,7 +2,7 @@
 #include <algorithm>
 #include <cstring>
 using namespace std;
-int n,w[16][16],dp[16][1 << 16];
+int n,w[16][16],dp[16][1 << 16]; //비트 마스킹 모두 0으로 초기화
 void input(){
     cin >> n;
     for(int i=0;i<n;i++)
