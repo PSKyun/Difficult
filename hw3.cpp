@@ -72,12 +72,12 @@ void optsrctree(){
         for(int i=1;i<=n-diag;i++){
             j=i+diag;
             for(int k=i;k<=j;k++){
-                if(minimum > a[i][k-1]+a[k+1][j]){
+                if(minimum >= a[i][k-1]+a[k+1][j]){
                     min_index=k;
                     minimum=a[i][k-1]+a[k+1][j];
+                    r[i][j]=min_index;
                 }
             }
-            r[i][j]=min_index;
             min_index=INT_MAX;
 			sum=p[i];
 			for(int s=i+1;s<j+1;s++)
